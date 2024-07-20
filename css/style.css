@@ -298,6 +298,50 @@ font-family:Georgia, "Times New Roman", Times, serif;
 
 
 
+img {
+
+    max-width: 100%;
+    opacity: 0.5;
+    transition: all 150ms;
+    box-shadow:rgb(243, 150, 58) 8px 8px 4px;
+}
+
+*{
+    box-sizing: border-box ;
+}
+
+h1 {
+    text-shadow: rgb(236, 129, 57) 0.3vw 0.3vh 0.4vmin;
+}
+
+h2 {
+  
+
+}
+
+img:hover{
+    opacity: 1;
+    box-shadow:rgb(236, 131, 56) 2px 2px 2px;
+
+}
+figcaption {
+    font-style: italic;
+    width: 120%;
+    text-align: left;
+}
+
+figcaption::before {
+    content: 'fig. ';
+    
+}
+
+article {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 1%;
+}
+
 
 
 /* inner pages css start */
@@ -330,3 +374,316 @@ input.button:hover{cursor:pointer; color:#cccccc;}
 .blog-posted-row a{color:#5D2D23; font-size:14px; text-decoration:underline; padding:0 0 0 8px}
 .blog-posted-row a:hover{text-decoration:none}
 /* inner pages css ends */
+
+/* CSS Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  }
+  
+  ul {
+	list-style-type: none;
+  }
+  
+  /* Style rules for desktop viewport */
+  body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	color: #5D2D23;
+  }
+  
+  header h1 {
+	font-family: 'DM Serif Display', serif;
+	font-size: 2.5em;
+	font-weight: normal;
+  }
+  
+  nav ul {
+	display: flex;
+	justify-content: center;
+	margin-top: 1em;
+  }
+  
+  nav li {
+	margin: 0 1em;
+  }
+  
+  nav a {
+	text-decoration: none;
+	color:#5D2D23;
+  }
+  
+  .action {
+	background-color:#5D2D23;
+	color: #fff;
+	padding: 1em 2em;
+	border-radius: 5px;
+	font-size: 1.25em;
+	display: inline-block;
+	margin-top: 1em;
+  }
+  
+  #piano, #guitar, #violin {
+	text-align: center;
+	margin-top: 2em;
+  }
+  
+  #info ul {
+	margin-left: 10%;
+  }
+  
+  .round {
+	border-radius: 8px;
+  }
+  
+  #contact a {
+	color:#5D2D23;
+	text-decoration: none;
+  }
+  
+  .tel-link {
+	background-color: #5D2D23;
+	padding: 2%;
+	margin: 0 auto;
+	width: 80%;
+	text-align: center;
+	border-radius: 5px;
+  }
+  
+  .tel-link a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.5em;
+	display: block;
+  }
+  
+  .email-link {
+	color: #5D2D23;
+	text-decoration: none;
+  }
+  
+  .map {
+	width: 95%;
+	height: 50%;
+  }
+  
+  /* Style rules for mobile viewport */
+  @media (max-width: 767px) {
+	.tab-desk {
+	  display: none;
+	}
+  
+	header h1 {
+	  font-size: 1.5em;
+	}
+  
+	nav li {
+	  display: block;
+	  border-top: 1px solid #e5e9fc;
+	}
+  
+	#piano, #guitar, #violin {
+	  margin-top: 1em;
+	}
+  }
+  
+  
+	/* Media Query for Tablet Viewport */
+  @media screen and (min-width: 550px), print {
+	/* Tablet Viewport: Show tab-desk class, hide mobile class */
+	.tab-desk {
+	  display: block;
+	}
+	.mobile {
+	  display: none;
+	}
+	
+	/* Tablet Viewport: Style rule for header content */
+	span.tab-desk {
+	  display: inline;
+	}
+	
+	/* Tablet Viewport: Style rules for nav area */
+	nav li {
+	  border-top: none;
+	  display: inline-block;
+	  font-size: 1.5em;
+	  border-right: 1px solid #e5e9fc;
+	}
+	
+	nav li:last-child {
+	  border-right: none;
+	}
+	
+	nav li a {
+	  padding: 0.25em 0.5em;
+	}
+	
+	/* Tablet Viewport: Style rule for map */
+	.map {
+	  width: 500px;
+	  height: 450px;
+	}
+  }
+  
+  /* Media Query for Desktop Viewport */
+  @media screen and (min-width: 769px), print {
+	/* Desktop Viewport: Style rule for header */
+	header {
+	  padding: 2%;
+	}
+	
+	/* Desktop Viewport: Style rules for nav area */
+	nav li a {
+	  padding: 0.5em 1.5em;
+	}
+	
+	nav li a:hover {
+	  color: #5D2D23;
+	  background-color: #e5e9fc;
+	}
+	
+	/* Desktop Viewport: Style rules for main content */
+	#info ul {
+	  margin-left: 5%;
+	}
+	
+	main h3 {
+	  font-size: 1.5em;
+	}
+	
+	#piano, #guitar, #violin {
+	  width: 29%;
+	  float: left;
+	  margin: 0 2%;
+	}
+  }
+  
+  /* Media Query for Print */
+  @media print {
+	body {
+	  background-color: #fff;
+	  color: #000;
+	}
+  }
+  
+  /* CSS Reset */
+  html, body, header, nav, main, section, aside, figure, figcaption, footer {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+  }
+  
+  /* Style rule for box sizing applies to all elements */
+  * {
+	box-sizing: border-box;
+  }
+  
+  img {
+	max-width: 100%;
+	height: auto;
+  }
+  
+  /* Mobile viewport */
+  @media screen and (max-width: 767px) {
+	aside {
+	  text-align: center;
+	  font-size: 1.5em;
+	  font-weight: bold;
+	  color:#5D2D23;
+	  text-shadow: 3px 3px 10px #8280cb;
+	}
+  
+	figure {
+	  position: relative;
+	  max-width: 275px;
+	  margin: 2% auto;
+	  border: 8px solid#5D2D23;
+	}
+  
+	figcaption {
+	  position: absolute;
+	  bottom: 0;
+	  background: #5D2D23;
+	  color: #fff;
+	  width: 100%;
+	  padding: 5% 0;
+	  text-align: center;
+	  font-family: Verdana, Arial, sans-serif;
+	  font-size: 1.5em;
+	  font-weight: bold;
+	}
+  }
+  
+  /* Tablet viewport */
+  @media screen and (min-width: 768px) {
+	.grid {
+	  display: grid;
+	  grid-template-columns: repeat(2, 1fr);
+	  grid-gap: 20px;
+	}
+  
+	aside {
+	  grid-column: 1 / span 2;
+	}
+  }
+  
+  /* Desktop viewport */
+  @media screen and (min-width: 1200px) {
+	.grid {
+	  grid-template-columns: repeat(4, 1fr);
+	}
+  
+	aside {
+	  grid-column: 1 / span 4;
+	}
+  
+	figcaption {
+	  font-size: 1em;
+	}
+  }
+
+/* Table Styles */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+  }
+  
+  th, td {
+	padding: 10px;
+	text-align: left;
+	border: 1px solid #ddd;
+  }
+  
+  th {
+	background-color: #f2f2f2;
+  }
+  
+  /* Header Styles */
+  .header {
+	background-color: #98692f;
+	padding: 20px;
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+	color: #f3eaea;
+  }
+
+  
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+	table {
+	  font-size: 12px;
+	}
+  
+	th, td {
+	  padding: 8px;
+	}
+  }
+  
