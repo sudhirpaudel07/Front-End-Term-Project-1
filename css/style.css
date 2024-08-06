@@ -1,7 +1,7 @@
 /* CSS Document */
 body
 {
-	background:#735538 url(../images/bg.jpg) left top repeat-x;
+	background:#8d6c43 left top repeat-x;
 	margin:0px;
 	padding:0px;
 	font-size: 14px;
@@ -343,6 +343,36 @@ gap: 1%;
 }
 
 
+.offer:hover {
+	transform: scale(1.25);
+	cursor: pointer;
+}
+
+.about-video video {
+	max-width: 100%;
+}
+
+
+@keyframes hoverEffect {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+@-webkit-keyframes hoverEffect {
+    0% { -webkit-transform: scale(1); }
+    50% { -webkit-transform: scale(1.2); }
+    100% { -webkit-transform: scale(1); }
+}
+
+.welcome {
+    display: inline-block;
+    animation: hoverEffect 2s infinite;
+    -webkit-animation: hoverEffect 2s infinite;
+}
+
+
+
 
 /* inner pages css start */
 h1.inner{font:20px tahoma, Arial; color:#fff; font-weight:100; margin:0px; padding:8px 0px 10px 10px; text-decoration:none}
@@ -423,11 +453,7 @@ input.button:hover{cursor:pointer; color:#cccccc;}
 	display: inline-block;
 	margin-top: 1em;
   }
-  
-  #piano, #guitar, #violin {
-	text-align: center;
-	margin-top: 2em;
-  }
+
   
   #info ul {
 	margin-left: 10%;
@@ -483,9 +509,7 @@ input.button:hover{cursor:pointer; color:#cccccc;}
 	  border-top: 1px solid #e5e9fc;
 	}
   
-	#piano, #guitar, #violin {
-	  margin-top: 1em;
-	}
+	
   }
   
   
@@ -553,12 +577,6 @@ input.button:hover{cursor:pointer; color:#cccccc;}
 	  font-size: 1.5em;
 	}
 	
-	#piano, #guitar, #violin {
-	  width: 29%;
-	  float: left;
-	  margin: 0 2%;
-	}
-  }
   
   /* Media Query for Print */
   @media print {
@@ -639,7 +657,7 @@ input.button:hover{cursor:pointer; color:#cccccc;}
 	}
   
 	aside {
-	  grid-column: 1 / span 4;
+	  grid-column: 1 / span 4; 
 	}
   
 	figcaption {
@@ -655,14 +673,15 @@ table {
 	font-size: 14px;
   }
   
+  
   th, td {
 	padding: 10px;
 	text-align: left;
-	border: 1px solid #ddd;
+	border: 1px solid #f9cc88;
   }
   
   th {
-	background-color: #f2f2f2;
+	background-color: #deab60;
   }
   
   /* Header Styles */
@@ -687,3 +706,28 @@ table {
 	}
   }
   
+
+  /* Basic styling for the content */
+.content {
+    height: 2000px; 
+    padding: 20px;
+}
+
+/* Styling for the Back-to-Top button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; 
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-to-top:hover {
+    background-color: #0056b3;
+}
